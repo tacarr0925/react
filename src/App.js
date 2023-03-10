@@ -7,17 +7,26 @@ function App() {
   const showEmployees = true;
 
   return (
-    <div className="App bg-red-300">
+    <div className="App">
       {showEmployees ? (
         <>
-        <input type='text' 
-          onChange={(e) => {
-            console.log(e.target.value)
-            setRole(e.target.value);
-        }} />
-          <Employee name="Caleb" role="intern"/>
-          <Employee name="Abby" role={role} />
-          <Employee name="John" />
+          <input type='text' 
+            onChange={(e) => {
+              console.log(e.target.value)
+              setRole(e.target.value);
+          }}
+          />
+          <div className="flex flex-wrap justify-center">
+            <Employee name="Caleb" role="intern" img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="Abby" role={role} img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="John" img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="Caleb" role="intern" img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="Abby" role={role} img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="John" img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="Caleb" role="intern" img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="Abby" role={role} img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+            <Employee name="John" img="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg" />
+          </div>
         </>
         ) : (
         <p>you cannot see the employees</p>
